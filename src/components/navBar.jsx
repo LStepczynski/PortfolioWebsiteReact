@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Link, Text } from '@primer/react';
 import { debounce } from 'lodash';
+import { RandomText } from './randomText'; 
 
 export const NavBar = () => {
   const [visibility, setVisibility] = useState(true);
@@ -54,7 +55,7 @@ export const NavBar = () => {
       }}
     >
       <Box sx={itemStyle}>
-        <Text>Leon Stepczynski</Text>
+        <RandomText text="Leon Stepczynski" sx={{cursor: "default"}} />
       </Box>
 
       <Box
@@ -63,21 +64,21 @@ export const NavBar = () => {
           display: "flex",
         }}
       >
-        <Link href="/">
+        <Link href="/" sx={{":hover": {textDecoration: "none"}}}>
           <Box sx={itemStyle}>
-            <Text>Home</Text>
+          <RandomText text="Home" iteration={1/5} cooldown={600} sx={{py: 5}}/>
           </Box>
         </Link>
 
-        <Link href="/projects">
+        <Link href="/projects" sx={{":hover": {textDecoration: "none"}}}>
           <Box sx={itemStyle}>
-            <Text>Projects</Text>
+          <RandomText text="Projects" iteration={1/2} cooldown={500} sx={{py: 5}}/>
           </Box>
         </Link>
 
-        <Link href="resume">
+        <Link href="resume" sx={{":hover": {textDecoration: "none"}}}>
           <Box sx={itemStyle}>
-            <Text>Resume</Text>
+          <RandomText text="Resume" iteration={1/3} cooldown={500} sx={{py: 5}}/>
           </Box>
         </Link>
       </Box>
