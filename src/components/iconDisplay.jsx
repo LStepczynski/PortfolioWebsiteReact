@@ -12,12 +12,15 @@ export const IconDisplay = () => {
     >
       <Box
         sx={{
-          width: "75%",
+          width: "60%",
           display: "flex",
           flexWrap: "wrap",
           justifyContent: "space-around",
+          '@media screen and (max-width: 1012px)': {
+            width: "75%",
+          },
           '@media screen and (max-width: 768px)': {
-            width: "90%",
+            width: "80%",
           },
         }}
       >

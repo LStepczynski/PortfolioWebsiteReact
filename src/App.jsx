@@ -40,7 +40,7 @@ function App() {
         
         <Box
           sx={{
-            width: "100vw",
+            width: "100%",
             display: "grid",
             justifyItems: "center",
           }}

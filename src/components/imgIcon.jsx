@@ -32,7 +32,7 @@ export const ImgIcon = ({ path }) => {
           setTimeout(() => {
             anime({
               targets: imgRef.current,
-              translateY: width > 768 ? "100px" : "60px",
+              translateY: "35px",
               scale: 1,
               rotate: "1turn",
               duration: 2000,
@@ -66,11 +66,12 @@ export const ImgIcon = ({ path }) => {
   }, [width]);
 
   const styles = {
-    width: width > 768 ? "160px" : "100px",
-    height: width > 768 ? "160px" : "100px",
+    width: width > 768 ? "100px" : "60px",
+    height: width > 768 ? "100px" : "60px",
     opacity: 0,
     transition: "opacity 2s ease",
-    margin: width > 768 ? "40px" : "30px",
+    transform: "translateY(-70px)",
+    margin: width > 768 ? "30px" : "20px",
   };
 
   return (
