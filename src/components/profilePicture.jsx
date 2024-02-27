@@ -4,16 +4,16 @@ import { MorphingBlob } from './morphingBlob';
 
 export const ProfilePicture = () => {
   const [isHovering, setIsHovering] = useState(false)
-  const [color, setColor] = useState("rgba(2, 30, 77, 0.8)")
+  const [color, setColor] = useState("rgba(2, 30, 77, 0.7)")
 
   const handleMouseEnter = () => {
     setIsHovering(true);
-    setColor("rgba(44, 2, 112, 0.8)")
+    setColor("rgba(44, 2, 112, 0.7)")
   };
 
   const handleMouseLeave = () => {
     setIsHovering(false);
-    setColor("rgba(2, 30, 77, 0.8)")
+    setColor("rgba(2, 30, 77, 0.7)")
   };
 
   const imgStyle = {
@@ -28,6 +28,14 @@ export const ProfilePicture = () => {
         position: 'relative',
         width: '520px',
         height: '520px',
+        '@media screen and (max-width: 768px)': {
+          height: '350px',
+          width: '350px',
+        },
+        '@media screen and (max-width: 544px)': {
+          height: '280px',
+          width: '280px',
+        },
       }}
     >
       <MorphingBlob color={color}/>
@@ -42,6 +50,14 @@ export const ProfilePicture = () => {
           width: '300px',
           left: '50%',
           top: '50%',
+          '@media screen and (max-width: 768px)': {
+            height: '200px',
+            width: '200px',
+          },
+          '@media screen and (max-width: 544px)': {
+            height: '160px',
+            width: '160px',
+          },
         }}
       >
         <img

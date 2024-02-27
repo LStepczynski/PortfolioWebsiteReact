@@ -6,10 +6,36 @@ import { NavBar } from './components/navBar'
 function App() {
   const mode = "dark"
 
+  const boxSize = {
+    width: "100vw",
+    '@media screen and (min-width: 544px)': {
+      width: "small",  // Adjust styles for screens with a maximum width of 768px
+    },
+    '@media screen and (min-width: 768px)': {
+      width: "medium",  // Adjust styles for screens with a maximum width of 768px
+    },
+    '@media screen and (min-width: 1012px)': {
+      width: "large",  // Adjust styles for screens with a maximum width of 768px
+    },
+    '@media screen and (min-width: 1280px)': {
+      width: "xlarge",  // Adjust styles for screens with a maximum width of 768px
+    },
+  }
+
   return (
     <ThemeProvider colorMode={mode}>
       <BaseStyles>
         <MatrixBackground />
+        <Box 
+          sx={{
+            backgroundColor: "canvas.default",
+            width: "100vw",
+            height: "100vh",
+            position: "fixed",
+            top: 0,
+            zIndex: -1000
+          }}
+        ></Box>
         <NavBar />
         
         <Box
@@ -19,7 +45,7 @@ function App() {
             justifyItems: "center",
           }}
         >
-          <Box sx={{ width: "xlarge" }}>
+          <Box sx={boxSize}>
             <Routes />
           </Box>
         </Box>
