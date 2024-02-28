@@ -2,6 +2,7 @@ import { Box, Text, Heading } from '@primer/react'
 import { ProfilePicture } from '../components/profilePicture'
 import { IconDisplay } from '../components/iconDisplay'
 import { PersonalInformation } from '../components/personalInfo'
+import { ProjectButton } from '../components/projectButton'
 
 export const Index = () => {
   return (
@@ -59,20 +60,29 @@ export const Index = () => {
       <IconDisplay />
 
       <PersonalInformation title="About Me">
-        Hi, My name is Leon Stepczynski, I was born in Poland and I'm a Web Developer and a programmer. Over the years I have been learning many usefull 
-        programmng languages, technologies, libraries and frameworks to assist me with my work. Some of them include: Html, CSS, React, Java Script, Python, 
-        SQL, Git and more.
+        Hello, I'm Leon Stepczynski. I was born in Poland, and I am a Web Developer and programmer. Throughout the years, I've dedicated myself to learning various 
+        useful programming languages, technologies, libraries, and frameworks to enhance my skills. Some of these include HTML, CSS, React, JavaScript, Python, 
+        SQL, Git, and more.
       </PersonalInformation>
 
-      <PersonalInformation title="SOMETHING ELSE">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eaque, delectus? Sunt corrupti, repellendus, qui hic fugit rerum vero magnam porro pariatur explicabo expedita impedit nobis nisi at nulla laborum incidunt!
+      <PersonalInformation title="Programming">
+        I began teaching myself how to code in October 2022, immersing myself in various tutorials and undertaking numerous projects to acquire my current 
+        knowledge. It wasn't until May 2023 that I established a specific goal—learning both Front-end and Back-end Web Development. As a tangible outcome of my 
+        efforts, I created this website.
       </PersonalInformation>
 
-      <p style={{marginTop: "500px"}}>siema</p>
-      <p style={{marginTop: "500px"}}>siema</p>
-      <p style={{marginTop: "500px"}}>siema</p>
-      <p style={{marginTop: "500px"}}>siema</p>
-      
+      <PersonalInformation title="Hobbies">
+        Participating in coding is a regular source of joy for me. Developing programs or websites that I or others can use gives me a strong sense of satisfaction. 
+        Additionally, I take pleasure in occasionally playing computer games as a refreshing break from my work. Alongside my enthusiasm for coding and computer-related 
+        pursuits, I also find delight in diving into the world of electronics. I make a dedicated effort to go to the gym or engage in regular exercise to offset the 
+        time I spend sitting.
+      </PersonalInformation>
+
+      <Box sx={{display:"grid", justifyItems:"center"}}>
+        <ProjectButton />
+      </Box>
+
+      <p style={{marginTop: "300px"}}></p>
     </>
   )
 }

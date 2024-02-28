@@ -65,6 +65,17 @@ export const ImgIcon = ({ path }) => {
     };
   }, [width]);
 
+  const handleHover = () => {
+    // const animation = anime({
+    //   targets: imgRef.current,
+    //   rotate: "1turn",
+    //   duration: 2000,
+    //   delay: 100,
+    // });
+    // setTimeout(() => {animation.remove(imgRef.current)}, 2000)
+  }
+  
+
   const styles = {
     width: width > 768 ? "100px" : "60px",
     height: width > 768 ? "100px" : "60px",
@@ -76,8 +87,8 @@ export const ImgIcon = ({ path }) => {
 
   return (
     <img
+      onMouseEnter={handleHover}
       ref={imgRef}
-      className="imgIconAnimate"
       style={styles}
       src={path}
       alt=""

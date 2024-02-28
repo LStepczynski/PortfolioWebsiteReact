@@ -3,6 +3,7 @@ import { useState, useEffect, useRef } from 'react'
 import anime from 'animejs';
 
 export const PersonalInformation = ({ children, title, id}) => {
+  const [hovering, setHovering] = useState(false)
   const textRef = useRef(null);
 
   useEffect(() => {
@@ -59,6 +60,8 @@ export const PersonalInformation = ({ children, title, id}) => {
       <Box
         id={id}
         ref={textRef}
+        onMouseOver={() => {setHovering(true)}}
+        onMouseLeave={() => {setHovering(false)}}
         sx={{
           width: "60%",
           transition: "transform 1s ease",
@@ -74,11 +77,19 @@ export const PersonalInformation = ({ children, title, id}) => {
           },
         }}
       >
-        <Heading>{title}</Heading>
+        <Heading
+          sx={{
+            transition: "all 0.3s ease",
+            letterSpacing: hovering ? "5px" : "",
+            transform: hovering ? "translateY(5px)" : "",
+          }}
+        >
+          {title}
+        </Heading>
         <p 
           style={{
             textAlign: "justify",
-            fontSize: "20px"
+            fontSize: "20px",
           }}
         >
           {children}

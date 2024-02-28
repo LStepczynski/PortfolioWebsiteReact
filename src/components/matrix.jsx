@@ -42,7 +42,7 @@ export const MatrixBackground = () => {
     
         context.fillText(text, columnIndex * fontSize, rainDrops[i] * fontSize);
     
-        if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.994) {
+        if (rainDrops[i] * fontSize > canvas.height && Math.random() > 0.998) {
           // Reset raindrop position and update its color
           rainDrops[i] = 0;
           raindropColors[columnIndex] = colors[Math.floor(colorIndex) % colors.length];
@@ -54,7 +54,7 @@ export const MatrixBackground = () => {
       context.fillStyle = 'rgba(13, 17, 23, 0.25)';
       context.fillRect(0, 0, canvas.width, canvas.height);
     
-      colorIndex += (0.001)*raindropsPerColumn;
+      colorIndex += (0.0015)*raindropsPerColumn;
     };
   
     const handleResize = () => {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useState, useRef } from 'react';
 import { Text } from '@primer/react';
 
 export const RandomText = ({ text, delay, iteration, cooldown, sx }) => {
@@ -11,7 +11,7 @@ export const RandomText = ({ text, delay, iteration, cooldown, sx }) => {
   if (!cooldown) cooldown = 1000
 
   sx.fontFamily = "M PLUS Code Latin, sans-serif";
-  sx.fontSize = "24px";
+  if (!sx.fontSize) sx.fontSize = "24px";
   const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
 
   const handleEnter = () => {
