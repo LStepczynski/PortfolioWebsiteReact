@@ -65,7 +65,7 @@ export const ProjectButton = () => {
           sx={{
             fontFamily: "M PLUS Code Latin, sans-serif",
             letterSpacing: hover ? "2px" : "",
-            transition: "all .3s ease",
+            transition: "letter-spacing .3s ease",
             fontSize: "28px",
             opacity: 0,
             p: 4,

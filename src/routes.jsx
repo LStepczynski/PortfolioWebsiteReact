@@ -5,6 +5,7 @@ import {
 } from "react-router-dom";
 
 import { Index } from './pages/index';
+import { Projects } from "./pages/projects";
 
 export const Routes = () => {
 
@@ -14,7 +15,11 @@ export const Routes = () => {
       element: <Index />,
     },
     {
-      path: "/test",
+      path: "/projects",
+      element: <Projects />,
+    },
+    {
+      path: "/resume",
       element: <div>Hello world2!</div>,
     },
   ]);
