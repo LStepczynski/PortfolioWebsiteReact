@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Box, Link, Button, Text, Heading } from '@primer/react';
 import { HeadPicture } from '../components/headPicture';
+import { ProjectDisplay } from '../components/projectDisplay';
 
 export const Projects = () => {
   return (
@@ -36,13 +37,16 @@ export const Projects = () => {
             fontSize: "24px",
             textAlign: "center",
             width: "50%",
+            mb: "130px",
             '@media screen and (max-width: 1012px)': {
               width: "60%",
-              fontSize: "20px"
+              fontSize: "20px",
+              mb: "90px",
             },
             '@media screen and (max-width: 768px)': {
               width: "90%",
-              fontSize: "16px"
+              fontSize: "16px",
+              mb: "60px",
             },
           }}
         >
@@ -50,7 +54,8 @@ export const Projects = () => {
           that I created to be displayed. Please remember that the list will keep updating and the projects displayed might change in 
           the future.
         </Text>
-        {/* <HeadPicture image="https://codingweek.org/wp-content/uploads/2019/08/christopher-robin-ebbinghaus-pgSkeh0yl8o-unsplash.jpg" opacity={0.4} /> */}
+
+
       </Box>
     </>
   )
