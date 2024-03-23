@@ -185,25 +185,38 @@ export const Resume = () => {
             <Button 
               sx={{
                 p:6,
-                borderRadius: "50px"
+                borderRadius: "50px",
+                '@media screen and (max-width: 768px)': {
+                  p: 5
+                },
               }}
             >
               <Box 
                 sx={{
                   display: "flex", 
                   alignItems: "center",
-                  gap: 4
+                  gap: 3
                 }}
               >
                 <Box>
-                  <Text sx={{fontSize: "30px"}}>Download Resume</Text>
+                  <Text 
+                    sx={{
+                      fontSize: "30px",
+                      '@media screen and (max-width: 768px)': {
+                        fontSize: "22px"
+                      },
+                    }}
+                  >
+                    Download Resume
+                  </Text>
                 </Box>
 
                 <Box sx={{display: "flex", alignItems: "center"}}>
                   <img 
                     src="download.png" 
                     style={{
-                      width: "45px"
+                      width: "45px",
+
                     }}
                   />
                 </Box>

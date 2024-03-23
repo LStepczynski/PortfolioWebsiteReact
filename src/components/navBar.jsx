@@ -34,6 +34,12 @@ export const NavBar = () => {
     };
   }, [handleScroll, handleResize]);
 
+  const selectedStyle = {
+    borderBottom: "2px solid",
+    borderColor: "#cfcfcf",
+    ":hover": { textDecoration: "none" },
+  }
+
   const itemStyle = {
     width: "max-content",
     alignItems: "center",
@@ -42,6 +48,8 @@ export const NavBar = () => {
     fontSize: 3,
     mx: 4,
   };
+
+  const location = window.location.pathname
 
   return (
     <Box
@@ -75,21 +83,21 @@ export const NavBar = () => {
           },
         }}
       >
-        <Link href="/" sx={{ ":hover": { textDecoration: "none" } }}>
+        <Link href="/" sx={location == "/" ? selectedStyle : { ":hover": { textDecoration: "none" } }}>
           <Box sx={itemStyle}>
-            <RandomText text="Home" iteration={1 / 5} cooldown={600} sx={{ py: 5 }} />
+            <RandomText text="Home" iteration={1 / 5} cooldown={600} sx={{ py: 4 }} />
           </Box>
         </Link>
 
-        <Link href="/projects" sx={{ ":hover": { textDecoration: "none" } }}>
+        <Link href="/projects" sx={location == "/projects" ? selectedStyle : { ":hover": { textDecoration: "none" } }}>
           <Box sx={itemStyle}>
-            <RandomText text="Projects" iteration={1 / 2} cooldown={500} sx={{ py: 5 }} />
+            <RandomText text="Projects" iteration={1 / 2} cooldown={500} sx={{ py: 4 }} />
           </Box>
         </Link>
 
-        <Link href="resume" sx={{ ":hover": { textDecoration: "none" } }}>
+        <Link href="resume" sx={location == "/resume" ? selectedStyle : { ":hover": { textDecoration: "none" } }}>
           <Box sx={itemStyle}>
-            <RandomText text="Resume" iteration={1 / 3} cooldown={500} sx={{ py: 5 }} />
+            <RandomText text="Resume" iteration={1 / 3} cooldown={500} sx={{ py: 4 }} />
           </Box>
         </Link>
       </Box>
