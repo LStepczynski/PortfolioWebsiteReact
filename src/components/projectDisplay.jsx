@@ -1,6 +1,8 @@
 import { Box, Heading, Link, Text } from '@primer/react';
 import { useState } from 'react';
 
+import { AnimatedImage } from './animatedImage';
+
 export const ProjectDisplay = ({ title, link, img, children}) => {
     return (
         <Box
@@ -58,12 +60,9 @@ export const ProjectDisplay = ({ title, link, img, children}) => {
                     Open In Github
                 </Link>
             </Box>
-            <img
-                style={{
-                    width: "100%"
-                }} 
-                src={img}
-            />
+            <Box>
+                <AnimatedImage image={img} />
+            </Box>
             <Box>
                 <Text as="p" 
                     sx={{
