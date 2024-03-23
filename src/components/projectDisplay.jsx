@@ -66,14 +66,14 @@ export const ProjectDisplay = ({ title, link, img, children}) => {
             />
             <Box>
                 <Text as="p" 
-                    style={{
+                    sx={{
                         textAlign: "justify",
                         fontSize: "22px",
                         '@media screen and (max-width: 1012px)': {
-                            fontSize: "18px",
+                            fontSize: "20px",
                         },
                         '@media screen and (max-width: 768px)': {
-                            fontSize: "14px",
+                            fontSize: "15px",
                         },
                     }}
                 >

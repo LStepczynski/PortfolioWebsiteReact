@@ -90,7 +90,7 @@ export const Projects = () => {
         using emails.
         </ProjectDisplay>
 
-        <ProjectDisplay title="Portfolio Website" img="project/WebsiteImg.png" link="">
+        <ProjectDisplay title="Portfolio Website" img="project/WebsiteImg.png" link="https://github.com/LStepczynski/PortfolioWebsiteReact">
         Let's not forget that this webiste is one of my projects too. It was created entirely by me in React JS, and the entire code can be seen in github. 
         </ProjectDisplay>
       </Box>

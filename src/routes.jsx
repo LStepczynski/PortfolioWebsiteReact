@@ -6,6 +6,7 @@ import {
 
 import { Index } from './pages/index';
 import { Projects } from "./pages/projects";
+import { Resume } from "./pages/resume";
 
 export const Routes = () => {
 
@@ -20,7 +21,7 @@ export const Routes = () => {
     },
     {
       path: "/resume",
-      element: <div>Hello world2!</div>,
+      element: <Resume />,
     },
   ]);
 
