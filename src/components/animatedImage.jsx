@@ -1,26 +1,39 @@
 import { Box } from '@primer/react';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 
 export const AnimatedImage = (props) => {
-  const [hover, sethover] = useState(false)
+  const [hovering, sethovering] = useState(false)
+  const containerRef = useRef(null)
+  const imageRef = useRef(null)
   
   const { image } = props   
+  
+  useEffect(() => {
+    setTimeout(() => {
+      containerRef.current.style.height = `${imageRef.current.offsetHeight}px`
+    }, 200)
+  }, [])
 
   return (
     <Box
-      onMouseEnter={() => {sethover(true)}}
-      onMouseLeave={() => {sethover(false)}}
+      ref={containerRef}
+      onMouseEnter={() => {sethovering(true)}}
+      onMouseLeave={() => {sethovering(false)}}
       sx={{
         width: "100%",
-        height: "100%",
         overflow: "hidden",
+        position: "relative",
       }}
     >
       <img 
+        ref={imageRef}
         style={{ 
-          width: hover ? "102%" :"100%",
-          transform: hover ? "translate(-1%, -1%)" : "",
+          transform: "translate(-50%, -50%)",
+          width: hovering ? "102%" :"100%",
+          position: "absolute",
+          top: "50%",
+          left: "50%",
           transition: "all .3s ease"
         }} 
         src={image} 
