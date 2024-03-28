@@ -56,26 +56,28 @@ export const ProjectButton = () => {
   }
 
   return (
-    <Box>
-        <Button
-          ref={btnRef}
-          onClick={handleClick}
-          onMouseEnter={() => {setHover(true)}}
-          onMouseLeave={() => {setHover(false)}}
-          sx={{
-            fontFamily: "M PLUS Code Latin, sans-serif",
-            letterSpacing: hover ? "2px" : "",
-            transition: "letter-spacing .3s ease",
-            fontSize: "28px",
-            opacity: 0,
-            p: 4,
-            ":hover": {
-              textDecoration: "none",
-            }
-          }}
-        >
-          Projects
-        </Button>
+    <Box
+      ref={btnRef}
+      onClick={handleClick}
+      onMouseEnter={() => {setHover(true)}}
+      onMouseLeave={() => {setHover(false)}}
+      sx={{
+        backgroundColor: hover ? "accent.fg" : "accent.emphasis",
+        fontFamily: "M PLUS Code Latin, sans-serif",
+        cursor: "pointer",
+        transition: "background-color 0.2s",
+        borderRadius: "10px",
+        fontSize: "28px",
+        opacity: 0,
+        mt: "40px",
+        px: 5,
+        py: 2,
+        ":hover": {
+          backgroundColor: "accent.fg",
+        }
+      }}
+    >
+      Projects
     </Box>
   )
 }
