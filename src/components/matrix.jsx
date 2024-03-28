@@ -1,6 +1,12 @@
 import React, { useEffect } from 'react';
 
+
 export const MatrixBackground = () => {
+
+  const getAlpha = () => {
+    return window.scrollY > 0 ? `${Math.min(window.scrollY / 100 * 0.03, 0.7)}` : "0.2";
+  }
+
   useEffect(() => {
     const canvas = document.getElementById('matrix');
     const context = canvas.getContext('2d');
@@ -51,7 +57,7 @@ export const MatrixBackground = () => {
       }
     
       // Gradually clear the entire canvas
-      context.fillStyle = 'rgba(13, 17, 23, 0.25)';
+      context.fillStyle = `rgba(13, 17, 23, ${getAlpha()})`;
       context.fillRect(0, 0, canvas.width, canvas.height);
     
       colorIndex += (0.0015)*raindropsPerColumn;
