@@ -3,10 +3,10 @@ import React, { useEffect, useState } from 'react';
 import { Box } from '@primer/react'
 
 export const MatrixBackground = () => {
-  const [alpha, setAlpha] = useState(0.1)
+  const [alpha, setAlpha] = useState(0.2)
 
   const getAlpha = () => {
-    return window.scrollY > 0 ? `${Math.min(window.scrollY / 100 * 0.07, 0.6)}` : "0.1";
+    return window.scrollY > 0 ? `${Math.min(window.scrollY / 100 * 0.07, 0.75)}` : "0.2";
   }
 
   useEffect(() => {
