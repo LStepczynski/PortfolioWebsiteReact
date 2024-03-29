@@ -1,7 +1,8 @@
-import { Box, Text, Heading, Button, Link } from '@primer/react'
+import { Box, Text, Heading, Button, Link, Octicon } from '@primer/react'
 
 import { FadeIn } from "../components/fadeIn"
 
+import { MoveToBottomIcon } from '@primer/octicons-react';
 
 export const Resume = () => {
   const headingStyle = {
@@ -83,6 +84,7 @@ export const Resume = () => {
               <Text
                 sx={{
                   fontSize: "30px",
+                  backgroundColor: "rgba(13, 17, 23, 0.6)",
                   '@media screen and (max-width: 1012px)': {
                     fontSize: "24px",
                   },
@@ -208,7 +210,7 @@ export const Resume = () => {
                   sx={{
                     display: "flex",
                     alignItems: "center",
-                    gap: 3
+                    gap: 2
                   }}
                 >
                   <Box>
@@ -225,12 +227,13 @@ export const Resume = () => {
                   </Box>
 
                   <Box sx={{ display: "flex", alignItems: "center" }}>
-                    <img
+                    {/* <img
                       src="download.png"
                       style={{
                         width: "45px",
                       }}
-                    />
+                    /> */}
+                    <MoveToBottomIcon size={45} />
                   </Box>
                 </Box>
               </Button>
