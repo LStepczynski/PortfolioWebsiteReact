@@ -27,6 +27,7 @@ export const Index = () => {
           sx={{
             fontSize: "56px",
             fontFamily: "M PLUS Code Latin, sans-serif",
+            backgroundColor: "rgba(13, 17, 23, 0.6)",
             width: "100%",
             textAlign: "center",
             '@media screen and (max-width: 768px)': {
@@ -43,6 +44,7 @@ export const Index = () => {
           sx={{
             fontFamily: "M PLUS Code Latin, sans-serif",
             textAlign: "center",
+            backgroundColor: "rgba(13, 17, 23, 0.6)",
             fontSize: "28px",
             width: "100%",
             '@media screen and (max-width: 768px)': {

@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { Box, Link, Button, Text, Heading } from '@primer/react';
-import { HeadPicture } from '../components/headPicture';
+import { Box, Text, Heading } from '@primer/react';
 import { ProjectDisplay } from '../components/projectDisplay';
+
 
 export const Projects = () => {
   return (
@@ -24,6 +23,7 @@ export const Projects = () => {
           sx={{
             fontFamily: "M PLUS Code Latin, sans-serif",
             fontSize: "72px",
+            backgroundColor: "rgba(13, 17, 23, 0.6)",
             '@media screen and (max-width: 768px)': {
               fontSize: "54px"
             },
@@ -35,6 +35,7 @@ export const Projects = () => {
           sx={{
             fontFamily: "M PLUS Code Latin, sans-serif",
             fontSize: "24px",
+            backgroundColor: "rgba(13, 17, 23, 0.6)",
             textAlign: "center",
             width: "50%",
             mb: "130px",
