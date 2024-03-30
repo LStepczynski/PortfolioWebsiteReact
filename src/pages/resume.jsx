@@ -2,7 +2,7 @@ import { Box, Text, Heading, Button, Link, Octicon } from '@primer/react'
 
 import { FadeIn } from "../components/fadeIn"
 
-import { MoveToBottomIcon } from '@primer/octicons-react';
+import { ResumeButton } from '../components/resumeButton';
 
 export const Resume = () => {
   const headingStyle = {
@@ -159,7 +159,15 @@ export const Resume = () => {
           </FadeIn>
 
           <FadeIn>
-            <Box sx={spacingStyle}>
+            <Box sx={{
+              mb: 8,
+              '@media screen and (max-width: 1012px)': {
+                md: 7
+              },
+              '@media screen and (max-width: 768px)': {
+                md: 5
+              },
+            }}>
               <Heading
                 sx={headingStyle}
               >
@@ -180,7 +188,7 @@ export const Resume = () => {
                   },
                 }}
               >
-                <Text as="p" sx={spacingStyle}>
+                <Text as="p">
                   I'm a 16 year old High School student in my Sophomore year. I come from Poland and I moved to the USA in October of 2021. Some of my
                   hobbies include: Programming, Exercise / Gym, Computer Games, and Electronics.
                 </Text>
@@ -189,56 +197,7 @@ export const Resume = () => {
           </FadeIn>
 
           <FadeIn>
-            <Box
-              sx={{
-                width: "100%",
-                display: "grid",
-                justifyItems: "center",
-                mb: 12,
-              }}
-            >
-              <Button
-                sx={{
-                  p: 6,
-                  borderRadius: "50px",
-                  '@media screen and (max-width: 768px)': {
-                    p: 5
-                  },
-                }}
-              >
-                <Box
-                  sx={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: 2
-                  }}
-                >
-                  <Box>
-                    <Text
-                      sx={{
-                        fontSize: "30px",
-                        '@media screen and (max-width: 768px)': {
-                          fontSize: "22px"
-                        },
-                      }}
-                    >
-                      Download Resume
-                    </Text>
-                  </Box>
-
-                  <Box sx={{ display: "flex", alignItems: "center" }}>
-                    {/* <img
-                      src="download.png"
-                      style={{
-                        width: "45px",
-                      }}
-                    /> */}
-                    <MoveToBottomIcon size={45} />
-                  </Box>
-                </Box>
-              </Button>
-            </Box>
-
+            <ResumeButton />
           </FadeIn>
         </Box>
       </Box>
