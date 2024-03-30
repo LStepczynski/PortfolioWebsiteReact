@@ -87,7 +87,7 @@ export const Projects = () => {
         <ProjectDisplay title="Stronghold Security" img="project/StrongholdSecurityImg.png" link="https://github.com/LStepczynski/StrongholdSecurity">
         Stronghold Security is a python app that will make sure that the person that is using the computer is the person that is supposed to. 
         When launched the app will display a password window that will dissapear after set amount of time. If the user did not input the password the 
-        program starts to monitor the computer activity and sends emails notifying the owner. It's also possible to remotly controle the computer 
+        program starts to monitor the computer activity and sends emails notifying the owner. It's also possible to remotly control the computer 
         using emails.
         </ProjectDisplay>
 
