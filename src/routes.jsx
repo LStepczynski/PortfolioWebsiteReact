@@ -6,7 +6,7 @@ import {
 
 import { Index } from './pages/index';
 import { Projects } from "./pages/projects";
-import { Resume } from "./pages/resume";
+import { Skills } from "./pages/skills";
 
 export const Routes = () => {
 
@@ -20,8 +20,8 @@ export const Routes = () => {
       element: <Projects />,
     },
     {
-      path: "/resume",
-      element: <Resume />,
+      path: "/skills",
+      element: <Skills />,
     },
   ]);
 
