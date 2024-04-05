@@ -2,7 +2,7 @@ import { Box, Heading, Link, Text } from '@primer/react';
 import { useState } from 'react';
 
 import { AnimatedImage } from './animatedImage';
-import { FadeIn } from './fadeIn';
+import { FadeIn } from './animation/fadeIn';
 
 export const ProjectDisplay = ({ title, link, img, children }) => {
   const [hovering, setHovering] = useState(false)

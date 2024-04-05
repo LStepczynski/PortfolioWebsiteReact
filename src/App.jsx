@@ -1,7 +1,7 @@
 import { ThemeProvider, BaseStyles, Box } from '@primer/react'
-import { MatrixBackground } from './components/matrix'
+import { MatrixBackground } from './components/core/matrix'
 import { Routes } from './routes'
-import { NavBar } from './components/navBar'
+import { NavBar } from './components/core/navBar'
 
 function App() {
   const mode = "dark"

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Box } from '@primer/react';
-import { MorphingBlob } from './morphingBlob'; 
+import { MorphingBlob } from './animation/morphingBlob'; 
 
 export const ProfilePicture = () => {
   const [isHovering, setIsHovering] = useState(false)

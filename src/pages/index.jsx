@@ -2,7 +2,8 @@ import { Box, Text, Heading } from '@primer/react'
 import { ProfilePicture } from '../components/profilePicture'
 import { IconDisplay } from '../components/iconDisplay'
 import { PersonalInformation } from '../components/personalInfo'
-import { ProjectButton } from '../components/projectButton'
+import { ResumeButton } from '../components/resumeButton'
+import { FadeIn } from '../components/animation/fadeIn'
 
 export const Index = () => {
   return (
@@ -80,11 +81,13 @@ export const Index = () => {
         time I spend sitting.
       </PersonalInformation>
 
-      <Box sx={{display:"grid", justifyItems:"center"}}>
-        <ProjectButton />
+      <Box sx={{display:"grid", justifyItems:"center", mt: 10}}>
+        <FadeIn>
+          <ResumeButton />
+        </FadeIn>
       </Box>
 
-      <p style={{marginTop: "300px"}}></p>
+      <p style={{marginTop: "150px"}}></p>
     </>
   )
 }

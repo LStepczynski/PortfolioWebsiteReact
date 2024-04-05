@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Box, Link, Button, Text } from '@primer/react';
-import { RandomText } from './randomText';
 
 export const ProjectButton = () => {
   const [hover, setHover] = useState(false)
@@ -57,27 +56,36 @@ export const ProjectButton = () => {
 
   return (
     <Box
-      ref={btnRef}
-      onClick={handleClick}
-      onMouseEnter={() => {setHover(true)}}
-      onMouseLeave={() => {setHover(false)}}
       sx={{
-        backgroundColor: hover ? "accent.fg" : "accent.emphasis",
-        fontFamily: "M PLUS Code Latin, sans-serif",
-        cursor: "pointer",
-        transition: "background-color 0.2s",
-        borderRadius: "10px",
-        fontSize: "28px",
-        opacity: 0,
-        mt: "40px",
-        px: 5,
-        py: 2,
-        ":hover": {
-          backgroundColor: "accent.fg",
-        }
+        width: "100%",
+        display: "grid",
+        justifyItems: "center",
+        mb: "180px",
       }}
     >
-      Projects
+      <Box
+        ref={btnRef}
+        onClick={handleClick}
+        onMouseEnter={() => { setHover(true) }}
+        onMouseLeave={() => { setHover(false) }}
+        sx={{
+          backgroundColor: hover ? "accent.fg" : "accent.emphasis",
+          fontFamily: "M PLUS Code Latin, sans-serif",
+          cursor: "pointer",
+          transition: "background-color 0.2s",
+          borderRadius: "10px",
+          fontSize: "28px",
+          opacity: 0,
+          mt: "40px",
+          px: 5,
+          py: 2,
+          ":hover": {
+            backgroundColor: "accent.fg",
+          }
+        }}
+      >
+        Projects
+      </Box>
     </Box>
   )
 }
