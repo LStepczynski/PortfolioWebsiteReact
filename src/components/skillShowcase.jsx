@@ -27,7 +27,12 @@ export const SkillShowcase = ({ icon, title, children }) => {
         <ImgIcon path={icon} />
         <Heading
           sx={{
-            fontSize: "58px"
+            textShadow: hovering ? "0px 0px 30px gray" : "0px 0px 0px transparent",
+            transition: "text-shadow 0.4s",
+            fontSize: "58px",
+            '@media screen and (max-width: 768px)': {
+              fontSize: "38px",
+            },
           }}
         >
           {title}
@@ -37,6 +42,10 @@ export const SkillShowcase = ({ icon, title, children }) => {
         sx={{
           ml: "13%",
           mt: "5%",
+          '@media screen and (max-width: 768px)': {
+            ml: "3%",
+            mt: "10%",
+          },
         }}
       >
         {children}

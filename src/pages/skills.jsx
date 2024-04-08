@@ -18,7 +18,7 @@ export const Skills = () => {
         "Understanding of basic JavaScript syntax, control flow, data types, operators, and comments.",
         "Knowledge of JavaScript objects, including object literals, accessing object properties, adding or deleting object properties, and iterating over object properties.",
         "Basic understanding of Document Object Model (DOM) manipulation techniques to interact with HTML elements dynamically.",
-        "Experienced in using TypeScript for development with React and Express JS, enhancing code quality and maintainability.",
+        "Experienced in using TypeScript for development with React and Express.js, enhancing code quality and maintainability.",
       ]
     },
     {
@@ -67,6 +67,15 @@ export const Skills = () => {
       ]
     },
     {
+      icon: images.github,
+      title: "Github",
+      points: [
+        "Understanding of version control concepts, including repositories, commits, branches, and merges.",
+        "Ability to create and manage repositories on GitHub, including initializing repositories, adding collaborators, configuring repository settings, and managing issues and pull requests.",
+        "Understanding of branching and merging strategies in Git/GitHub, including creating feature branches, merging branches, and resolving merge conflicts."
+      ]
+    },
+    {
       icon: images.django,
       title: "Django",
       points: [
@@ -86,16 +95,18 @@ export const Skills = () => {
           mt: "280px",
           fontFamily: "M PLUS Code Latin, sans-serif",
           '@media screen and (max-width: 1012px)': {
-            mt: "170px"
+            mt: "250px"
           },
           '@media screen and (max-width: 768px)': {
-            mt: "150px"
+            mt: "230px"
           },
         }}
       >
         <Box
           sx={{
             width: "60%",
+            display: "grid",
+            justifyItems: "center",
             '@media screen and (max-width: 1012px)': {
               width: "80%",
             },
@@ -105,19 +116,44 @@ export const Skills = () => {
           }}
         >
           <FadeIn>
-            <Heading sx={{ fontSize: "46px" }}>About my skills,</Heading>
-            <Text
-              as="p"
+            <Box
               sx={{
-                backgroundColor: "rgba(13, 17, 23, 0.8)",
-                textAlign: "justify",
-                lineHeight: "1.65",
-                fontSize: "22px",
-                my: 2,
+                display: "grid",
+                justifyItems: "center",
               }}
             >
-              In my captivating and enlightening programming journey I picked up many skills that can be used for crafting various programs and websites.
-            </Text>
+              <Heading 
+                sx={{ 
+                  textAlign: "center",
+                  fontSize: "46px",
+                  width: "80%",
+                  '@media screen and (max-width: 768px)': {
+                    fontSize: "40px",
+                  },
+                  '@media screen and (max-width: 450px)': {
+                    fontSize: "30px",
+                  },
+                }}
+              >
+                About my skills,
+              </Heading>
+              <Text
+                as="p"
+                sx={{
+                  backgroundColor: "rgba(13, 17, 23, 0.8)",
+                  textAlign: "justify",
+                  lineHeight: "1.65",
+                  fontSize: "22px",
+                  width: "80%",
+                  my: 2,
+                  '@media screen and (max-width: 768px)': {
+                    fontSize: "18px",
+                  },
+                }}
+              >
+                In my captivating and enlightening programming journey I picked up many skills that can be used for crafting various programs and websites.
+              </Text>
+            </Box>
           </FadeIn>
 
           <Box
@@ -125,13 +161,16 @@ export const Skills = () => {
               display: "flex",
               flexDirection: "column",
               gap: "100px",
-              mt: "150px",
+              mt: "100px",
               mb: "60px",
+              '@media screen and (max-width: 768px)': {
+                mr: 3,
+              },
             }}
           >
-            {skillList.map((skill) => {
+            {skillList.map((skill, index) => {
               return (
-                <FadeIn>
+                <FadeIn key={index}>
                   <SkillShowcase
                     icon={skill.icon}
                     title={skill.title}
@@ -139,14 +178,36 @@ export const Skills = () => {
                     <Box
                       sx={{
                         display: "grid",
-                        gap: "15px"
+                        gap: "15px",
                       }}
                     >
-                      {skill.points.map((description) => {
+                      {skill.points.map((description, i) => {
                         return (
-                          <Box sx={{ display: "flex", alignItems: "center", gap: 3, fontSize: "18px" }}>
-                            <DotFillIcon size={30} />
-                            <Text>{description}</Text>
+                          <Box 
+                            key={i}
+                            sx={{ 
+                              alignItems: "center", 
+                              fontSize: "18px",
+                              display: "flex", 
+                              gap: 3, 
+                              '@media screen and (max-width: 768px)': {
+                                mt: 2,
+                              },
+                            }}
+                          >
+                            <DotFillIcon size={25} />
+                            <Text
+                              as="p"
+                              sx={{
+                                m: 0,
+                                textAlign: "justify",
+                                '@media screen and (max-width: 768px)': {
+                                  fontSize: "14px",
+                                },
+                              }}
+                            >
+                              {description}
+                            </Text>
                           </Box>
                         )
                       })}
