@@ -86,8 +86,6 @@ export const Index = () => {
           <ResumeButton />
         </FadeIn>
       </Box>
-
-      <p style={{marginTop: "150px"}}></p>
     </>
   )
 }
