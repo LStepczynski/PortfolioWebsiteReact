@@ -51,9 +51,8 @@ export const Projects = () => {
             },
           }}
         >
-          All the things that are below are a part of my collection of projects. I selected the most interesting and complex projects 
-          that I created to be displayed. Please remember that the list will keep updating and the projects displayed might change in 
-          the future.
+          The following projects are part of my portfolio, carefully selected to showcase the most interesting and complex work I've done. 
+          Please note that this list is dynamic and may change in the future as I continue to update and refine my projects.
         </Text>
 
         <ProjectDisplay title="Herext" img="project/HerextImg.png" link="https://github.com/LStepczynski/Herext">
@@ -92,7 +91,7 @@ export const Projects = () => {
         </ProjectDisplay>
 
         <ProjectDisplay title="Portfolio Website" img="project/WebsiteImg.png" link="https://github.com/LStepczynski/PortfolioWebsiteReact">
-        Let's not forget that this webiste is one of my projects too. It was created entirely by me in React JS, and the entire code can be seen in github. 
+        Let's not forget that this webiste is one of my projects too. It was created entirely by me in React JS, and the full code can be seen in github. 
         </ProjectDisplay>
       </Box>
     </>

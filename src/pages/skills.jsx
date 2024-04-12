@@ -25,8 +25,8 @@ export const Skills = () => {
       icon: images.python,
       title: "Python",
       points: [
-        "Skilled in Python programming with intermediate to advanced proficiency, encompassing general development tasks",
-        "Basic familiarity with backend web development in python using frameworks like Django and Flask, with a focus on building RESTful APIs and web applications",
+        "Skilled in Python programming with intermediate to advanced proficiency, encompassing general development tasks.",
+        "Basic familiarity with backend web development in python using frameworks like Django and Flask, with a focus on building RESTful APIs and web applications.",
       ]
     },
     {
@@ -36,7 +36,7 @@ export const Skills = () => {
         "Understanding of React component structure and the concept of reusable UI components.",
         "Knowledge of React state and props, and how to use them to manage component data and pass data between components.",
         "Ability to fetch data from external APIs using fetch or other methods, and update component state with the retrieved data.",
-        "Familiarity with React component and styling libraries like Primer React"
+        "Familiarity with React component and styling libraries like Primer React."
       ]
     },
     {
@@ -52,9 +52,9 @@ export const Skills = () => {
       icon: images.html,
       title: "HTML",
       points: [
-        "Familiarity with the basic structure of an HTML document",
-        "Understanding of semantic HTML elements for structuring content",
-        "Knowledge of HTML attributes and their values",
+        "Familiarity with the basic structure of an HTML document.",
+        "Understanding of semantic HTML elements for structuring content.",
+        "Knowledge of HTML attributes and their values.",
       ]
     },
     {
@@ -81,7 +81,7 @@ export const Skills = () => {
       points: [
         "Knowledge of fundamental Django concepts such as models, views, templates, and URLs, and how they work together to build web applications.",
         "Understanding of Django's built-in ORM for interacting with databases, including defining models, querying data, and performing CRUD operations.",
-        "Understanding of Django's built-in authentication system for managing user authentication and authorization",
+        "Understanding of Django's built-in authentication system for managing user authentication and authorization.",
       ]
     },
   ]

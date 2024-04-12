@@ -6,10 +6,6 @@ import { MoveToBottomIcon } from '@primer/octicons-react';
 export const ResumeButton = () => {
   const [hover, setHover] = useState(false)
 
-  const handleClick = () => {
-
-  }
-
   return (
     <>
       <Box
@@ -31,7 +27,6 @@ export const ResumeButton = () => {
           }}
         >
           <Box
-            onClick={handleClick}
             onMouseEnter={() => { setHover(true) }}
             onMouseLeave={() => { setHover(false) }}
             sx={{

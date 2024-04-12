@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Box, Link, Button, Text } from '@primer/react';
+import { Box } from '@primer/react';
+
+import anime from 'animejs';
 
 export const ProjectButton = () => {
   const [hover, setHover] = useState(false)
