@@ -17,9 +17,12 @@ export const ProfilePicture = () => {
   };
 
   const imgStyle = {
-    width: '100%',
-    transition: 'width 0.3s ease, transform 0.37s ease', // Add smooth transition
-    ...(isHovering && { width: '107%', transform: "translate(-3.5%, -3.5%)" }), // Apply width increase on hover
+    width: isHovering ? "107%" : "100%",
+    transform: "translate(-50%, -50%)",
+    transition: "all .3s ease",
+    position: "absolute",
+    left: "50%",
+    top: "50%",
   };
 
   return (
