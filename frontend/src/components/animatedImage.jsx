@@ -29,6 +29,7 @@ export const AnimatedImage = (props) => {
     >
       <img 
         ref={imageRef}
+        loading='lazy'
         style={{ 
           transform: "translate(-50%, -50%)",
           width: hovering ? "102%" : "100%",

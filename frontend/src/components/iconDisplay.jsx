@@ -26,13 +26,13 @@ export const IconDisplay = () => {
           },
         }}
       >
-        <ImgIcon path={images.react} />
         <ImgIcon path={images.javascript} />
+        <ImgIcon path={images.nodejs} /> 
+        <ImgIcon path={images.react} />
         <ImgIcon path={images.html} />
         <ImgIcon path={images.css} />
-        <ImgIcon path={images.django} />
         <ImgIcon path={images.python} />
-        <ImgIcon path={images.nodejs} />
+        <ImgIcon path={images.aws} />
         <ImgIcon path={images.github} />
       </Box>
     </Box>

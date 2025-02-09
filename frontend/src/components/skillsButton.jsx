@@ -3,7 +3,7 @@ import { useState } from "react"
 import { Box, Text, Link } from '@primer/react'
 import { MoveToBottomIcon } from '@primer/octicons-react';
 
-export const ResumeButton = () => {
+export const SkillsButton = () => {
   const [hover, setHover] = useState(false)
 
   return (
@@ -17,8 +17,7 @@ export const ResumeButton = () => {
         }}
       >
         <Link 
-          target="_blank" 
-          href="Resume-LS.pdf"
+          href="/skills"
           sx={{
             color: "white",
             ":hover": {
@@ -60,12 +59,8 @@ export const ResumeButton = () => {
                     },
                   }}
                 >
-                  Download Resume
+                  Skills
                 </Text>
-              </Box>
-
-              <Box sx={{ display: "flex", alignItems: "center" }}>
-                <MoveToBottomIcon size={40} />
               </Box>
             </Box>
           </Box>

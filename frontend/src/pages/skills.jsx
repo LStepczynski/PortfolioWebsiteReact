@@ -22,6 +22,27 @@ export const Skills = () => {
       ]
     },
     {
+      icon: images.react,
+      title: "ReactJS",
+      points: [
+        "Understanding of React component structure and the concept of reusable UI components.",
+        "Knowledge of React state and props, and how to use them to manage component data and pass data between components.",
+        "Ability to fetch data from external APIs using fetch or other methods, and update component state with the retrieved data.",
+        "Familiarity with React component and styling libraries like Primer React and Styled Components."
+      ]
+    },
+    {
+      icon: images.aws,
+      title: "AWS",
+      points: [
+        "Basic understanding of core AWS services, enabling the deployment and management of web applications in a cloud environment.",
+        "Experience with AWS Lambda for running serverless functions, handling backend logic without managing server infrastructure.",
+        "Proficient in using Amazon S3 for secure, scalable storage of static assets, and configuring S3 for website hosting.",
+        "Familiarity with Amazon API Gateway for creating, deploying, and managing RESTful APIs to connect frontend and backend services.",
+        "Knowledge of AWS Route 53 for domain registration and DNS management, as well as using AWS SES for sending transactional emails."
+      ]
+    },
+    {
       icon: images.python,
       title: "Python",
       points: [
@@ -30,24 +51,15 @@ export const Skills = () => {
       ]
     },
     {
-      icon: images.react,
-      title: "React",
-      points: [
-        "Understanding of React component structure and the concept of reusable UI components.",
-        "Knowledge of React state and props, and how to use them to manage component data and pass data between components.",
-        "Ability to fetch data from external APIs using fetch or other methods, and update component state with the retrieved data.",
-        "Familiarity with React component and styling libraries like Primer React."
-      ]
-    },
-    {
       icon: images.nodejs,
       title: "Node Js",
       points: [
-        "Knowledge of Express.js, a minimalist web framework for Node.js, and its core features such as routing, middleware, and handling HTTP requests and responses.",
-        "Ability to define routes in Express.js using HTTP methods (GET, POST, PUT, DELETE) and route parameters to handle different types of requests.",
-        "Understanding of RESTful API principles and best practices for designing and implementing RESTful APIs in Express.js.",
+        "Advanced knowledge of Express.js, including routing, middleware, and efficient handling of HTTP requests and responses.",
+        "Proficient in designing and implementing secure, scalable RESTful APIs, following best practices for performance and maintainability.",
+        "Strong understanding of authentication and authorization techniques in Node.js using JWT, session management, and secure password handling with hashing algorithms.",
+        "Skilled in integrating databases with Node.js, working with NoSQL databases like DynamoDB."
       ]
-    },
+    },    
     {
       icon: images.html,
       title: "HTML",
@@ -61,9 +73,10 @@ export const Skills = () => {
       icon: images.css,
       title: "CSS",
       points: [
-        "Understanding of CSS selectors such as element selectors, class selectors, ID selectors, attribute selectors.",
-        "Familiarity with common CSS properties and their values, including properties for styling text, backgrounds, and borders.",
-        "Ability to use browser developer tools for inspecting and debugging CSS code, identifying styling issues, and making necessary adjustments."
+        "Proficient in modern CSS methodologies such as Flexbox, Grid, and responsive design techniques for creating adaptive, mobile-first layouts.",
+        "Experienced with CSS-in-JS libraries like Styled Components for dynamic styling in React applications, ensuring maintainable and scalable code.",
+        "Familiarity with utility-first CSS frameworks like Tailwind CSS, optimizing development workflows through reusable, composable utility classes.",
+        "Skilled in using browser developer tools for debugging complex styling issues."
       ]
     },
     {
@@ -73,15 +86,6 @@ export const Skills = () => {
         "Understanding of version control concepts, including repositories, commits, branches, and merges.",
         "Ability to create and manage repositories on GitHub, including initializing repositories, adding collaborators, configuring repository settings, and managing issues and pull requests.",
         "Understanding of branching and merging strategies in Git/GitHub, including creating feature branches, merging branches, and resolving merge conflicts."
-      ]
-    },
-    {
-      icon: images.django,
-      title: "Django",
-      points: [
-        "Knowledge of fundamental Django concepts such as models, views, templates, and URLs, and how they work together to build web applications.",
-        "Understanding of Django's built-in ORM for interacting with databases, including defining models, querying data, and performing CRUD operations.",
-        "Understanding of Django's built-in authentication system for managing user authentication and authorization.",
       ]
     },
   ]

@@ -64,7 +64,7 @@ export const ProfilePicture = () => {
         }}
       >
         <img
-          src="profilePicture.jpg"
+          src="profilePicture.webp"
           alt="Profile Picture"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}

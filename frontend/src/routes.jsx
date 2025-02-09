@@ -1,15 +1,12 @@
 import * as React from "react";
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
-import { Index } from './pages/index';
+import { Index } from "./pages/index";
 import { Projects } from "./pages/projects";
 import { Skills } from "./pages/skills";
+import { NotFound } from "./pages/notFound";
 
 export const Routes = () => {
-
   const router = createBrowserRouter([
     {
       path: "/",
@@ -23,10 +20,11 @@ export const Routes = () => {
       path: "/skills",
       element: <Skills />,
     },
+    {
+      path: "*",
+      element: <NotFound />,
+    },
   ]);
 
-  return (
-    <RouterProvider router={router} />
-  );
-}
-
+  return <RouterProvider router={router} />;
+};

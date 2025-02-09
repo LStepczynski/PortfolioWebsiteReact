@@ -2,7 +2,7 @@ import { Box, Text, Heading } from '@primer/react'
 import { ProfilePicture } from '../components/profilePicture'
 import { IconDisplay } from '../components/iconDisplay'
 import { PersonalInformation } from '../components/personalInfo'
-import { ResumeButton } from '../components/resumeButton'
+import { SkillsButton } from '../components/skillsButton'
 import { FadeIn } from '../components/animation/fadeIn'
 
 export const Index = () => {
@@ -64,8 +64,8 @@ export const Index = () => {
 
       <PersonalInformation title="About Me">
         Hello, I'm Leon Stepczynski. I was born in Poland, and I am a Web Developer and programmer. Throughout the years, I've dedicated myself to learning various 
-        useful programming languages, technologies, libraries, and frameworks to enhance my skills. Some of these include HTML, CSS, React, JavaScript, Python, 
-        SQL, Git, and more.
+        useful programming languages, technologies, libraries, and frameworks to enhance my skills. Some of these include JavaScript, ExpressJS, ReactJS, HTML, CSS, Python, 
+        AWS, Git, and more.
       </PersonalInformation>
 
       <PersonalInformation title="Programming">
@@ -83,7 +83,7 @@ export const Index = () => {
 
       <Box sx={{display:"grid", justifyItems:"center", mt: 10}}>
         <FadeIn>
-          <ResumeButton />
+          <SkillsButton />
         </FadeIn>
       </Box>
     </>
